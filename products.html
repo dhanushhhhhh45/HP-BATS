@@ -24,11 +24,7 @@
         100% { background-position: 0% 50%; }
     }
 
-    h1 {
-        font-size: 50px;
-        animation: floatTitle 4s ease-in-out infinite;
-        margin-bottom: 20px;
-    }
+    h1 { font-size: 50px; animation: floatTitle 4s ease-in-out infinite; margin-bottom: 20px; }
 
     @keyframes floatTitle {
         0% { transform: translateY(0); }
@@ -62,8 +58,6 @@
         transition: 0.3s;
     }
 
-    .search-bar button:hover { background: white; }
-
     .products-container {
         display: flex;
         flex-wrap: wrap;
@@ -73,7 +67,7 @@
     }
 
     .product {
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255,255,255,0.12);
         padding: 15px;
         border-radius: 14px;
         width: 260px;
@@ -82,14 +76,9 @@
         transform: translateY(40px);
         opacity: 0;
         animation: fadeUp 1s forwards;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: 0.3s;
         position: relative;
         cursor: pointer;
-    }
-
-    .product:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 25px yellow;
     }
 
     .product img {
@@ -98,10 +87,6 @@
         object-fit: cover;
         border-radius: 10px;
         transition: 0.4s;
-    }
-
-    .product img:hover {
-        transform: scale(1.08) rotate(-2deg);
     }
 
     .badge {
@@ -116,26 +101,16 @@
         font-size: 12px;
     }
 
-    .product h3 { margin: 10px 0 5px 0; }
-    .price { font-weight: bold; color: yellow; font-size: 18px; margin: 5px 0; }
+    .price { font-weight: bold; color: yellow; font-size: 18px; }
 
     button.add-to-cart {
         padding: 10px 20px;
-        font-size: 16px;
+        background: yellow;
         border: none;
         border-radius: 8px;
-        cursor: pointer;
-        background: yellow;
-        color: black;
-        margin-top: 10px;
         font-weight: bold;
-        transition: 0.3s;
-    }
-
-    button.add-to-cart:hover {
-        background: white;
-        transform: scale(1.12) rotate(2deg);
-        box-shadow: 0 0 15px yellow;
+        margin-top: 10px;
+        cursor: pointer;
     }
 
     .go-cart {
@@ -147,54 +122,22 @@
         border-radius: 10px;
         text-decoration: none;
         font-weight: bold;
-        transition: 0.3s;
     }
 
-    .go-cart:hover {
-        background: white;
-        transform: scale(1.12);
-        box-shadow: 0 0 20px yellow;
-    }
-
-    /* Home Icon */
     .home-icon {
         position: fixed;
         top: 15px;
         right: 15px;
         width: 45px;
-        height: 45px;
-        cursor: pointer;
-        transition: 0.3s;
-        z-index: 100;
     }
 
-    .home-icon:hover { transform: scale(1.1); }
-
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-        h1 { font-size: 36px; }
-        .search-bar {
-            flex-direction: column;
-            max-width: 90%;
-        }
-        .search-bar input, .search-bar button {
-            width: 100%;
-            margin: 5px 0;
-        }
-        .products-container { gap: 15px; }
-        .product { width: 90%; transform: translateY(20px); }
-        .product img { height: 180px; }
-        button.add-to-cart { width: 100%; }
-        .go-cart { width: 90%; padding: 15px 0; font-size: 16px; }
-    }
+    @keyframes fadeUp { to { transform: translateY(0); opacity: 1; } }
 </style>
 </head>
 <body>
 
 <!-- Home Icon -->
-<a href="index.html"><img src="home.png" alt="Home" class="home-icon"></a>
+<a href="index.html"><img src="home.png" class="home-icon"></a>
 
 <h1>Our Products</h1>
 
@@ -205,7 +148,8 @@
 
 <div class="products-container" id="productsContainer">
 
-    <div class="product" data-video="https://www.instagram.com/reel/DPBnYv0ia3Y/?igsh=aHZsdjBtN3ljbzVj"></div>
+    <!-- PRODUCT 1 FIXED -->
+    <div class="product" data-video="https://www.instagram.com/reel/DPBnYv0ia3Y/?igsh=aHZsdjBtN3ljbzVj">
         <div class="badge">Best Seller</div>
         <img src="goat 2.0.jpeg" alt="GOAT 2.0">
         <h3>GOAT 2.0</h3>
@@ -214,6 +158,7 @@
         <button class="add-to-cart" data-name="GOAT 2.0" data-price="4000">Add to Cart</button>
     </div>
 
+    <!-- PRODUCT 2 -->
     <div class="product" data-video="https://www.instagram.com/reel/DMu7OWFJH5g/?igsh=ZzQyZTdhNm12cXA0">
         <div class="badge">New</div>
         <img src="goat.jpeg" alt="GOAT">
@@ -223,7 +168,8 @@
         <button class="add-to-cart" data-name="GOAT" data-price="3500">Add to Cart</button>
     </div>
 
-    <div class="product" data-video="https://www.instagram.com/reel/DMfdHT7pxjo/?igsh=MTJvaGR0dG15NXI0dQ=="></div>
+    <!-- PRODUCT 3 FIXED -->
+    <div class="product" data-video="https://www.instagram.com/reel/DMfdHT7pxjo/?igsh=MTJvaGR0dG15NXI0dQ==">
         <img src="customize.jpeg" alt="CUSTOMIZE EDITION">
         <h3>CUSTOMIZE EDITION</h3>
         <p>Top-end bat made with premium willow for champions.</p>
@@ -231,6 +177,7 @@
         <button class="add-to-cart" data-name="CUSTOMIZE EDITION" data-price="3000">Add to Cart</button>
     </div>
 
+    <!-- PRODUCT 4 -->
     <div class="product" data-video="https://www.instagram.com/reel/DRPPPGkCSCl/?igsh=MmZhejAzNHk1OXI1">
         <img src="soft ball.jpeg" alt="SOFT BALL">
         <h3>SOFT BALL</h3>
@@ -239,6 +186,7 @@
         <button class="add-to-cart" data-name="SOFT BALL" data-price="2000">Add to Cart</button>
     </div>
 
+    <!-- PRODUCT 5 -->
     <div class="product" data-video="https://www.instagram.com/reel/DQtxavRCV01/?igsh=bDA2bmRveWVkeHho">
         <img src="high quality gloves.jpeg" alt="1ST QUALITY GLOVES">
         <h3>1ST QUALITY GLOVES</h3>
@@ -247,6 +195,7 @@
         <button class="add-to-cart" data-name="1ST QUALITY GLOVES" data-price="700">Add to Cart</button>
     </div>
 
+    <!-- PRODUCT 6 -->
     <div class="product" data-video="https://www.instagram.com/reel/DQtxavRCV01/?igsh=bDA2bmRveWVkeHho">
         <img src="quality gloves.jpeg" alt="2ND QUALITY GLOVES">
         <h3>2ND QUALITY GLOVES</h3>
@@ -261,31 +210,25 @@
 
 <script>
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const buttons = document.querySelectorAll('.add-to-cart');
 
-buttons.forEach(button => {
+document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', (e) => {
         e.stopPropagation();
-        const name = button.dataset.name;
-        const price = button.dataset.price;
-        cart.push({name, price});
+        cart.push({name: button.dataset.name, price: button.dataset.price});
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert(name + " added to cart!");
+        alert(button.dataset.name + " added to cart!");
     });
 });
 
-const products = document.querySelectorAll('.product');
-products.forEach(prod => {
+document.querySelectorAll('.product').forEach(prod => {
     prod.addEventListener('click', () => {
-        const videoURL = prod.getAttribute('data-video');
-        if(videoURL) window.open(videoURL, "_blank");
+        window.open(prod.dataset.video, "_blank");
     });
 });
 
 function searchProducts() {
     const input = document.getElementById('searchInput').value.toLowerCase();
-    const products = document.querySelectorAll('.product');
-    products.forEach(prod => {
+    document.querySelectorAll('.product').forEach(prod => {
         const title = prod.querySelector('h3').innerText.toLowerCase();
         prod.style.display = title.includes(input) ? 'block' : 'none';
     });

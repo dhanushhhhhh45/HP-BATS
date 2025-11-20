@@ -13,7 +13,7 @@
         animation: moveBG 12s ease infinite;
         color: white;
         text-align: center;
-        padding: 30px;
+        padding: 30px 10px;
         overflow-x: hidden;
         position: relative;
     }
@@ -171,6 +171,24 @@
     .home-icon:hover { transform: scale(1.1); }
 
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        h1 { font-size: 36px; }
+        .search-bar {
+            flex-direction: column;
+            max-width: 90%;
+        }
+        .search-bar input, .search-bar button {
+            width: 100%;
+            margin: 5px 0;
+        }
+        .products-container { gap: 15px; }
+        .product { width: 90%; transform: translateY(20px); }
+        .product img { height: 180px; }
+        button.add-to-cart { width: 100%; }
+        .go-cart { width: 90%; padding: 15px 0; font-size: 16px; }
+    }
 </style>
 </head>
 <body>
@@ -187,7 +205,7 @@
 
 <div class="products-container" id="productsContainer">
 
-    <div class="product" data-video="https://www.instagram.com/reel/PRODUCT_VIDEO_1">
+    <div class="product" data-video="https://www.instagram.com/reel/DPBnYv0ia3Y/?igsh=aHZsdjBtN3ljbzVj">
         <div class="badge">Best Seller</div>
         <img src="goat 2.0.jpeg" alt="GOAT 2.0">
         <h3>GOAT 2.0</h3>
@@ -196,7 +214,7 @@
         <button class="add-to-cart" data-name="GOAT 2.0" data-price="4000">Add to Cart</button>
     </div>
 
-    <div class="product" data-video="https://www.instagram.com/reel/PRODUCT_VIDEO_2">
+    <div class="product" data-video="https://www.instagram.com/reel/DMu7OWFJH5g/?igsh=ZzQyZTdhNm12cXA0">
         <div class="badge">New</div>
         <img src="goat.jpeg" alt="GOAT">
         <h3>GOAT</h3>
@@ -205,35 +223,38 @@
         <button class="add-to-cart" data-name="GOAT" data-price="3500">Add to Cart</button>
     </div>
 
-    <div class="product" data-video="https://www.instagram.com/reel/PRODUCT_VIDEO_3">
+    <div class="product" data-video="https://www.instagram.com/reel/DMfdHT7pxjo/?igsh=MTJvaGR0dG15NXI0dQ==">
         <img src="customize.jpeg" alt="CUSTOMIZE EDITION">
         <h3>CUSTOMIZE EDITION</h3>
         <p>Top-end bat made with premium willow for champions.</p>
         <div class="price">₹3000</div>
         <button class="add-to-cart" data-name="CUSTOMIZE EDITION" data-price="3000">Add to Cart</button>
     </div>
-<div class="product" data-video="https://www.instagram.com/reel/DPBnYv0ia3Y/?igsh=aHZsdjBtN3ljbzVj">
-        <img src="soft ball.jpeg" alt="CUSTOMIZE EDITION">
+
+    <div class="product" data-video="https://www.instagram.com/reel/DRPPPGkCSCl/?igsh=MmZhejAzNHk1OXI1">
+        <img src="soft ball.jpeg" alt="SOFT BALL">
         <h3>SOFT BALL</h3>
         <p>LESS WEIGHT SPECIALIST</p>
         <div class="price">₹2000</div>
         <button class="add-to-cart" data-name="SOFT BALL" data-price="2000">Add to Cart</button>
     </div>
+
     <div class="product" data-video="https://www.instagram.com/reel/DQtxavRCV01/?igsh=bDA2bmRveWVkeHho">
-        <img src="high quality gloves.jpeg" alt="CUSTOMIZE EDITION">
+        <img src="high quality gloves.jpeg" alt="1ST QUALITY GLOVES">
         <h3>1ST QUALITY GLOVES</h3>
         <p>WELL BALANCED</p>
         <div class="price">₹700</div>
         <button class="add-to-cart" data-name="1ST QUALITY GLOVES" data-price="700">Add to Cart</button>
     </div>
-     <div class="product" data-video="https://www.instagram.com/reel/DQtxavRCV01/?igsh=bDA2bmRveWVkeHho">
-        <img src="quality gloves.jpeg" alt="CUSTOMIZE EDITION">
+
+    <div class="product" data-video="https://www.instagram.com/reel/DQtxavRCV01/?igsh=bDA2bmRveWVkeHho">
+        <img src="quality gloves.jpeg" alt="2ND QUALITY GLOVES">
         <h3>2ND QUALITY GLOVES</h3>
         <p>WELL FIT</p>
         <div class="price">₹500</div>
         <button class="add-to-cart" data-name="2ND QUALITY GLOVES" data-price="500">Add to Cart</button>
     </div>
-    
+
 </div>
 
 <a href="cart.html" class="go-cart">Go to Cart</a>
